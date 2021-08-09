@@ -1,20 +1,16 @@
-static int	ft_isalpha(int c)
-{
-	if (c < 0)
-		return (0);
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: davirodr <davirodr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/03 20:08:38 by davirodr          #+#    #+#             */
+/*   Updated: 2021/08/09 15:47:22 by davirodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

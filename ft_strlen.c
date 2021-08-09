@@ -1,9 +1,23 @@
-unsigned long	ft_strlen(const char *s);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: davirodr <davirodr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/03 20:10:22 by davirodr          #+#    #+#             */
+/*   Updated: 2021/08/03 20:10:23 by davirodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-unsigned long	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	unsigned long	i;
+	size_t	i;
 
+	if (s == 0)
+		return (0);
 	i = 0;
 	while (s[i] != '\0')
 		i++;

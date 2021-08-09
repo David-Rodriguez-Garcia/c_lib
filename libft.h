@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: davirodr <davirodr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/03 20:11:09 by davirodr          #+#    #+#             */
+/*   Updated: 2021/08/03 20:11:10 by davirodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -10,6 +22,16 @@ typedef struct s_list {
 	struct s_list	*next;
 }				t_list;
 
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+size_t	ft_strlen(const char *s);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -43,5 +65,49 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+/*# include "ft_atoi.c"
+# include "ft_bzero.c"
+# include "ft_calloc.c"
+# include "ft_isalnum.c"
+# include "ft_isalpha.c"
+# include "ft_isascii.c"
+# include "ft_isdigit.c"
+# include "ft_isprint.c"
+# include "ft_itoa.c"
+# include "ft_lstadd_back.c"
+# include "ft_lstadd_front.c"
+# include "ft_lstclear.c"
+# include "ft_lstdelone.c"
+# include "ft_lstiter.c"
+# include "ft_lstlast.c"
+# include "ft_lstmap.c"
+# include "ft_lstnew.c"
+# include "ft_lstsize.c"
+# include "ft_memchr.c"
+# include "ft_memcmp.c"
+# include "ft_memcpy.c"
+# include "ft_memmove.c"
+# include "ft_memset.c"
+# include "ft_putchar_fd.c"
+# include "ft_putendl_fd.c"
+# include "ft_putnbr_fd.c"
+# include "ft_putstr_fd.c"
+# include "ft_split.c"
+# include "ft_strchr.c"
+# include "ft_strdup.c"
+# include "ft_striteri.c"
+# include "ft_strjoin.c"
+# include "ft_strlcat.c"
+# include "ft_strlcpy.c"
+# include "ft_strlen.c"
+# include "ft_strmapi.c"
+# include "ft_strncmp.c"
+# include "ft_strnstr.c"
+# include "ft_strrchr.c"
+# include "ft_strtrim.c"
+# include "ft_substr.c"
+# include "ft_tolower.c"
+# include "ft_toupper.c"*/
 
 #endif
